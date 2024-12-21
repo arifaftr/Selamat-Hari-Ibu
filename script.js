@@ -39,4 +39,16 @@ function nextMessage() {
   } else {
     alert("Tidak ada pesan lagi! 😊");
   }
+document.addEventListener('DOMContentLoaded', function () {
+  var music = document.getElementById('background-music');
+  
+  // Memastikan audio langsung diputar dan tidak mute
+  music.muted = false; // Menghilangkan mute
+  music.play();         // Memainkan audio
+
+  // Memastikan audio dapat dimulai tanpa interaksi pengguna (khusus iOS/Android)
+  document.body.addEventListener('click', function () {
+    music.play();
+  });
+});
 }
