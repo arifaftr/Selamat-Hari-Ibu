@@ -1,3 +1,4 @@
+/* File: script.js */
 let currentMessageIndex = 0;
 const messages = [
   "Bunda, engkau adalah sosok yang luar biasa. Terima kasih telah membimbing kami dengan penuh kasih sayang!",
@@ -7,18 +8,15 @@ const messages = [
   "Bunda, kamu adalah yang terbaik! Terima kasih telah selalu ada untuk kami."
 ];
 
-function playMusic() {
-  var music = document.getElementById('background-music');
-  music.play();
-}
-
 function showPopup() {
   const popup = document.getElementById('popup');
   const popupMessage = document.getElementById('popup-message');
+  const closeBtn = document.getElementById('close-btn');
   
   currentMessageIndex = 0; // Reset ke pesan pertama
   popupMessage.innerText = messages[currentMessageIndex];
   popup.style.display = "flex";
+  closeBtn.style.display = "none"; // Sembunyikan tombol close di awal
 }
 
 function closePopup() {
@@ -28,10 +26,16 @@ function closePopup() {
 
 function nextMessage() {
   const popupMessage = document.getElementById('popup-message');
+  const closeBtn = document.getElementById('close-btn');
   
   if (currentMessageIndex < messages.length - 1) {
     currentMessageIndex++;
     popupMessage.innerText = messages[currentMessageIndex];
+    
+    // Jika pesan terakhir, tampilkan tombol close
+    if (currentMessageIndex === messages.length - 1) {
+      closeBtn.style.display = "inline-block";
+    }
   } else {
     alert("Tidak ada pesan lagi! 😊");
   }
