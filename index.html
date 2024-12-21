@@ -1,3 +1,4 @@
+<!-- File: index.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -11,7 +12,6 @@
     <h1>Selamat Hari Ibu!</h1>
     <p>Terima kasih telah menjadi sosok yang luar biasa dalam hidup kami. Kami mencintaimu!</p>
     <img src="image.png" alt="Happy Mothers Day" class="image">
-    <button onclick="playMusic()">Putar Musik</button>
     <button onclick="showPopup()">Klik untuk Pesan Spesial</button>
   </div>
   
@@ -21,15 +21,15 @@
       <span class="close" onclick="closePopup()">&times;</span>
       <h2 id="popup-message">Pesan ucapan Hari Ibu akan muncul di sini</h2>
       <button id="next-btn" onclick="nextMessage()">Next</button>
+      <button id="close-btn" style="display: none;" onclick="closePopup()">Close</button>
     </div>
   </div>
 
-  <audio id="background-music" loop>
+  <audio id="background-music" autoplay loop>
     <source src="backsound.mp3" type="audio/mpeg">
     Browser Anda tidak mendukung pemutar audio.
   </audio>
 
-  <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </body>
 </html>
