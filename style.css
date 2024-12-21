@@ -1,23 +1,55 @@
 /* File: style.css */
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #fdf5e6;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #444;
+}
+
+.animated-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
   max-width: 600px;
   padding: 20px;
   background: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ff7f50;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #555;
 }
 
 .image {
@@ -37,6 +69,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 }
 
 button:hover {
@@ -60,7 +93,13 @@ button:hover {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+  font-size: 1.8em;
+  color: #ff7f50;
+  margin-bottom: 20px;
 }
 
 .close {
@@ -69,4 +108,9 @@ button:hover {
   right: 20px;
   font-size: 20px;
   cursor: pointer;
+  color: #ff6347;
+}
+
+.close:hover {
+  color: #ff4500;
 }
