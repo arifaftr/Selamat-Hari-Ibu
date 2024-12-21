@@ -2,10 +2,10 @@
 let currentMessageIndex = 0;
 const messages = [
   "Bunda, engkau adalah sosok yang luar biasa. Terima kasih telah membimbing kami dengan penuh kasih sayang!",
-  "Selamat Hari Ibu! Kamu adalah pahlawan dalam hidup kami!",
-  "Bunda, terima kasih atas semua cinta dan dukungan yang engkau berikan. Kami sangat menghargainya!",
+  "Selamat Hari Ibu! Bunda adalah pahlawan dalam hidup kami!",
+  "Bunda, terima kasih atas semua cinta dan dukungan yang telah engkau berikan.",
   "Selamat Hari Ibu! Semoga hari ini penuh kebahagiaan dan cinta!",
-  "Bunda, kamu adalah yang terbaik! Terima kasih telah selalu ada untuk kami."
+  "Bunda, Engkau adalah yang terbaik! Terima kasih telah selalu ada untuk kami."
 ];
 
 function showPopup() {
