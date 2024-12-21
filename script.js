@@ -2,7 +2,7 @@
 let currentMessageIndex = 0;
 const messages = [
   "Happy Bunda Wardah's Day To a beautiful woman, who is as delicate and as lovely as a flower",
-  "Selamat Hari Ibu! Bunda adalah pahlawan dalam hidup kami!",
+  "Happy Bunda Wardah's Day To a beautiful woman, who is as delicate and as lovely as a flower",
   "Bunda, terima kasih atas semua cinta dan dukungan yang telah engkau berikan.",
   "Selamat Hari Ibu! Semoga hari ini penuh kebahagiaan dan cinta!",
   "Bunda, Engkau adalah yang terbaik! Terima kasih telah selalu ada untuk kami."
