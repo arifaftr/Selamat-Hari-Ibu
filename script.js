@@ -1,7 +1,7 @@
 /* File: script.js */
 let currentMessageIndex = 0;
 const messages = [
-  "Bunda, engkau adalah sosok yang luar biasa. Terima kasih telah membimbing kami dengan penuh kasih sayang!",
+  "Happy Bunda Wardah's Day\nTo a beautiful woman, who is as delicate and as lovely as a flower",
   "Selamat Hari Ibu! Bunda adalah pahlawan dalam hidup kami!",
   "Bunda, terima kasih atas semua cinta dan dukungan yang telah engkau berikan.",
   "Selamat Hari Ibu! Semoga hari ini penuh kebahagiaan dan cinta!",
