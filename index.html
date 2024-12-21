@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Hari Ibu!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Selamat Hari Ibu!</h1>
+    <p>Terima kasih telah menjadi sosok yang luar biasa dalam hidup kami. Kami mencintaimu!</p>
+    <img src="image.png" alt="Happy Mothers Day" style="width:300px; display:block; margin:20px auto;">
+    <button onclick="playMusic()">Putar Musik</button>
+    <button onclick="showPopup()">Klik untuk Pesan Spesial</button>
+  </div>
+  
+  <!-- Pop-up Message -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2 id="popup-message">Pesan ucapan Hari Ibu akan muncul di sini</h2>
+    </div>
+  </div>
+
+  <audio id="background-music" loop>
+    <source src="backsound.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung pemutar audio.
+  </audio>
+  <script>
+    function playMusic() {
+      var music = document.getElementById('background-music');
+      music.play();
+    }
+
+    function showPopup() {
+      var messages = [
+        "Bunda, engkau adalah sosok yang luar biasa. Terima kasih telah membimbing kami dengan penuh kasih sayang!",
+        "Selamat Hari Ibu! Kamu adalah pahlawan dalam hidup kami!",
+        "Bunda, terima kasih atas semua cinta dan dukungan yang engkau berikan. Kami sangat menghargainya!",
+        "Selamat Hari Ibu! Semoga hari ini penuh kebahagiaan dan cinta!",
+        "Bunda, kamu adalah yang terbaik! Terima kasih telah selalu ada untuk kami."
+      ];
+
+      var randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById('popup-message').innerText = randomMessage;
+
+      var popup = document.getElementById('popup');
+      popup.style.display = "flex";
+    }
+
+    function closePopup() {
+      var popup = document.getElementById('popup');
+      popup.style.display = "none";
+    }
+  </script>
+</body>
+</html>
