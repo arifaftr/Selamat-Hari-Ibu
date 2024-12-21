@@ -1,104 +1,115 @@
-/* Tema dasar */
+/* File: style.css */
 body {
-  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #ffefd5, #ffe4e1);
-  color: #333;
+  height: 100vh;
+  background-color: #fdf5e6;
 }
 
 .container {
+  max-width: 600px;
   padding: 20px;
-  margin-top: 50px;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: #ff4500;
-}
-
-p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .image {
-  width: 300px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 300px;
   margin: 20px auto;
+  display: block;
 }
 
 button {
-  background: #ff4500;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
+  display: block;
+  margin: 10px auto;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ff7f50;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  margin: 10px;
-  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 button:hover {
-  transform: scale(1.1);
-  background: #e63e00;
+  background-color: #ff6347;
 }
 
-/* Pop-up */
 .popup {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  animation: fadeIn 0.5s;
 }
 
 .popup-content {
-  background: white;
+  background: #ffffff;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  animation: slideUp 0.5s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .close {
   position: absolute;
   top: 10px;
-  right: 10px;
-  cursor: pointer;
+  right: 20px;
   font-size: 20px;
-  color: red;
+  cursor: pointer;
 }
 
-#next-btn {
-  margin-top: 10px;
-  display: inline-block;
+/* File: script.js */
+let currentMessageIndex = 0;
+const messages = [
+  "Bunda, engkau adalah sosok yang luar biasa. Terima kasih telah membimbing kami dengan penuh kasih sayang!",
+  "Selamat Hari Ibu! Kamu adalah pahlawan dalam hidup kami!",
+  "Bunda, terima kasih atas semua cinta dan dukungan yang engkau berikan. Kami sangat menghargainya!",
+  "Selamat Hari Ibu! Semoga hari ini penuh kebahagiaan dan cinta!",
+  "Bunda, kamu adalah yang terbaik! Terima kasih telah selalu ada untuk kami."
+];
+
+function showPopup() {
+  const popup = document.getElementById('popup');
+  const popupMessage = document.getElementById('popup-message');
+  const closeBtn = document.getElementById('close-btn');
+  
+  currentMessageIndex = 0; // Reset ke pesan pertama
+  popupMessage.innerText = messages[currentMessageIndex];
+  popup.style.display = "flex";
+  closeBtn.style.display = "none"; // Sembunyikan tombol close di awal
 }
 
-/* Animasi */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+function closePopup() {
+  const popup = document.getElementById('popup');
+  popup.style.display = "none";
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
+function nextMessage() {
+  const popupMessage = document.getElementById('popup-message');
+  const closeBtn = document.getElementById('close-btn');
+  
+  if (currentMessageIndex < messages.length - 1) {
+    currentMessageIndex++;
+    popupMessage.innerText = messages[currentMessageIndex];
+    
+    // Jika pesan terakhir, tampilkan tombol close
+    if (currentMessageIndex === messages.length - 1) {
+      closeBtn.style.display = "inline-block";
+    }
+  } else {
+    alert("Tidak ada pesan lagi! 😊");
   }
 }
