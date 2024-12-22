@@ -11,45 +11,45 @@
   <div id="splash">
     <div class="flower">
       <div class="stem"></div>
+      <div class="leaf leaf1"></div>
+      <div class="leaf leaf2"></div>
       <div class="petal petal1"></div>
       <div class="petal petal2"></div>
       <div class="petal petal3"></div>
       <div class="petal petal4"></div>
+      <div class="petal petal5"></div>
+      <div class="petal petal6"></div>
       <div class="center"></div>
     </div>
   </div>
 
-  <!-- Konten Utama -->
-  <div id="main-content" style="display: none;">
-    <div class="animated-background">
-      <div class="container">
-        <h1>Selamat Hari Ibu!</h1>
-        <p1>Untuk Bunda, perempuan paling hebat. </p1>
-        <p2>Terima kasih telah menjadi sosok yang luar biasa dalam hidup kami. Kami mencintaimu!</p2>
-        <img src="image.png" alt="Happy Mothers Day" class="image">
-        <button onclick="showPopup()">Klik Disini</button>
-      </div>
-    </div>
-
-    <!-- Pop-up Message -->
-    <div id="popup" class="popup">
-      <div class="popup-content">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <h2 id="popup-message">Pesan ucapan Hari Ibu akan muncul di sini</h2>
-        <button id="next-btn" onclick="nextMessage()">Next</button>
-        <button id="close-btn" style="display: none;" onclick="closePopup()">Close</button>
-      </div>
+  <!-- Halaman Utama -->
+  <div class="animated-background" style="display: none;">
+    <div class="container">
+      <h1>Selamat Hari Ibu!</h1>
+      <p1>Untuk Bunda, perempuan paling hebat.</p1>
+      <p2>Terima kasih telah menjadi sosok yang luar biasa dalam hidup kami. Kami mencintaimu!</p2>
+      <img src="image.png" alt="Happy Mothers Day" class="image">
+      <button onclick="showPopup()">Klik Disini</button>
     </div>
   </div>
 
-  <!-- Musik Background -->
+  <!-- Pop-up Message -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2 id="popup-message">Pesan ucapan Hari Ibu akan muncul di sini</h2>
+      <button id="next-btn" onclick="nextMessage()">Next</button>
+      <button id="close-btn" style="display: none;" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- Musik -->
   <audio id="background-music" autoplay loop playsinline>
     <source src="backsound.ogg" type="audio/ogg">
     <source src="backsound.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Script dan Style -->
-  <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </body>
 </html>
