@@ -1,4 +1,3 @@
-<!-- File: index.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -19,33 +18,38 @@
       <div class="center"></div>
     </div>
   </div>
-  <div class="animated-background">
-    <div class="container">
-      <h1>Selamat Hari Ibu!</h1>
-      <p1>Untuk Bunda, perempuan paling hebat. </p1>
-      <p2>Terima kasih telah menjadi sosok yang luar biasa dalam hidup kami. Kami mencintaimu!</p2>
-      <img src="image.png" alt="Happy Mothers Day" class="image">
-      <button onclick="showPopup()">Klik Disini</button>
+
+  <!-- Konten Utama -->
+  <div id="main-content" style="display: none;">
+    <div class="animated-background">
+      <div class="container">
+        <h1>Selamat Hari Ibu!</h1>
+        <p1>Untuk Bunda, perempuan paling hebat. </p1>
+        <p2>Terima kasih telah menjadi sosok yang luar biasa dalam hidup kami. Kami mencintaimu!</p2>
+        <img src="image.png" alt="Happy Mothers Day" class="image">
+        <button onclick="showPopup()">Klik Disini</button>
+      </div>
     </div>
-  </div>
-  
-  <!-- Pop-up Message -->
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <h2 id="popup-message">Pesan ucapan Hari Ibu akan muncul di sini</h2>
-      <button id="next-btn" onclick="nextMessage()">Next</button>
-      <button id="close-btn" style="display: none;" onclick="closePopup()">Close</button>
+
+    <!-- Pop-up Message -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 id="popup-message">Pesan ucapan Hari Ibu akan muncul di sini</h2>
+        <button id="next-btn" onclick="nextMessage()">Next</button>
+        <button id="close-btn" style="display: none;" onclick="closePopup()">Close</button>
+      </div>
     </div>
   </div>
 
+  <!-- Musik Background -->
   <audio id="background-music" autoplay loop playsinline>
-  <source src="backsound.ogg" type="audio/ogg">
-  <source src="backsound.mp3" type="audio/mpeg">
+    <source src="backsound.ogg" type="audio/ogg">
+    <source src="backsound.mp3" type="audio/mpeg">
   </audio>
 
+  <!-- Script dan Style -->
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
-
 </body>
 </html>
