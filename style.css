@@ -1,4 +1,6 @@
 /* File: style.css */
+
+/* Umum */
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +10,78 @@ body {
   color: #444;
 }
 
+/* Splash Screen */
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fce4ec; /* Warna latar splash screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Animasi Bunga */
+.flower {
+  position: relative;
+  width: 50px;
+  height: 150px;
+}
+
+/* Tangkai Bunga */
+.stem {
+  position: absolute;
+  width: 5px;
+  height: 100px;
+  background-color: green;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: growStem 1.5s ease-out;
+}
+
+/* Kelopak Bunga */
+.petal {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: pink;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.petal1 { top: 0; left: 50%; transform: translateX(-50%); animation: bloom 0.5s 1.5s forwards; }
+.petal2 { top: 10px; left: 0; animation: bloom 0.5s 1.7s forwards; }
+.petal3 { top: 10px; right: 0; animation: bloom 0.5s 1.9s forwards; }
+.petal4 { top: 20px; left: 50%; transform: translateX(-50%); animation: bloom 0.5s 2.1s forwards; }
+
+/* Pusat Bunga */
+.center {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: yellow;
+  border-radius: 50%;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: bloom 0.5s 2.3s forwards;
+}
+
+/* Animasi */
+@keyframes growStem {
+  from { height: 0; }
+  to { height: 100px; }
+}
+
+@keyframes bloom {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Background Animasi */
 .animated-background {
   position: relative;
   width: 100%;
@@ -32,6 +106,7 @@ body {
   }
 }
 
+/* Konten Utama */
 .container {
   max-width: 600px;
   padding: 20px;
@@ -59,6 +134,7 @@ p {
   display: block;
 }
 
+/* Tombol */
 button {
   display: block;
   margin: 10px auto;
@@ -76,6 +152,7 @@ button:hover {
   background-color: #ff6347;
 }
 
+/* Pop-up */
 .popup {
   display: none;
   position: fixed;
