@@ -1,15 +1,5 @@
 /* File: style.css */
 
-/* Umum */
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  color: #444;
-}
-
 /* Splash Screen */
 #splash {
   position: fixed;
@@ -25,55 +15,58 @@ body {
 /* Animasi Bunga */
 .flower {
   position: relative;
-  width: 50px;
-  height: 150px;
+  width: 70px;
+  height: 200px;
 }
 
 /* Tangkai Bunga */
 .stem {
   position: absolute;
   width: 5px;
-  height: 100px;
+  height: 0;
   background-color: green;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  animation: growStem 1.5s ease-out;
+  animation: growStem 2.5s ease-out forwards; /* Durasi lebih lama */
 }
 
 /* Kelopak Bunga */
 .petal {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   background-color: pink;
   border-radius: 50%;
   opacity: 0;
 }
 
-.petal1 { top: 0; left: 50%; transform: translateX(-50%); animation: bloom 0.5s 1.5s forwards; }
-.petal2 { top: 10px; left: 0; animation: bloom 0.5s 1.7s forwards; }
-.petal3 { top: 10px; right: 0; animation: bloom 0.5s 1.9s forwards; }
-.petal4 { top: 20px; left: 50%; transform: translateX(-50%); animation: bloom 0.5s 2.1s forwards; }
+/* Posisi Kelopak */
+.petal1 { top: -10px; left: 50%; transform: translateX(-50%); animation: bloom 1s 2.5s forwards; }
+.petal2 { top: 15px; left: -15px; animation: bloom 1s 2.7s forwards; }
+.petal3 { top: 15px; right: -15px; animation: bloom 1s 2.9s forwards; }
+.petal4 { top: 45px; left: 50%; transform: translateX(-50%); animation: bloom 1s 3.1s forwards; }
+.petal5 { top: 30px; left: -30px; animation: bloom 1s 3.3s forwards; }
+.petal6 { top: 30px; right: -30px; animation: bloom 1s 3.5s forwards; }
 
 /* Pusat Bunga */
 .center {
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   background-color: yellow;
   border-radius: 50%;
-  top: 10px;
+  top: 25px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  animation: bloom 0.5s 2.3s forwards;
+  animation: bloom 1s 3.7s forwards;
 }
 
 /* Animasi */
 @keyframes growStem {
   from { height: 0; }
-  to { height: 100px; }
+  to { height: 150px; }
 }
 
 @keyframes bloom {
@@ -81,7 +74,7 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 
-/* Background Animasi */
+/* Background Animasi Gradien */
 .animated-background {
   position: relative;
   width: 100%;
